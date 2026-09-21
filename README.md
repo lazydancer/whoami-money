@@ -38,13 +38,6 @@ a CSV you can open in any spreadsheet.
   <img src="docs/ledger.png" alt="The ledger: a grid of transactions with the accounts nav beside it" width="820">
 </p>
 
-### Bank statements in, categorised
-
-Drop a CSV, OFX or QFX from your bank, or paste rows from a spreadsheet. The
-app works out which account the statement belongs to, matches the rows you
-already have, files each payee the way you filed it last time, and leaves what
-is left for you to review.
-
 ### Reports that read a period
 
 | Page          | What it answers                                                             |
@@ -55,24 +48,31 @@ is left for you to review.
 | **Portfolio** | What your investments actually returned, from the revaluations you recorded |
 | **Future**    | A forecast that borrows the rate your own ledger measured                   |
 
-### A review panel, not a nag
-
-Duplicates, unusual amounts, lapsed bills, payees spelled two ways and rows
-filed oddly are listed beside the ledger, each with its fix. A judgement call
-you disagree with can be set aside for good.
-
 ### Private sync, if you want it
 
-Turn on an account and your journal is encrypted on your device with a key
-only you hold, then synced to a server that stores ciphertext and nothing it
-could read. There is no password to reset, because there is no password. Share
-a journal with a partner by code.
+The app is complete without an account. Sync is for two things: the same
+journal on your phone and your laptop, and a journal shared with a partner.
 
-### An assistant that stays home
+Turn it on and the app generates a random 256-bit account key on your device
+and shows it to you once. Everything you sync is encrypted with keys derived
+from it before it leaves the browser, so the server stores ciphertext, the
+record ids and the order they arrived in, and nothing it could read: not a
+payee, not an amount, not an account name. Signing in on another device means
+pasting the key; a wrong key is refused on the device itself, without a
+request being made.
 
-Categorisation help and review judgement can run against a model on your own
-machine. Nothing about your finances goes to a hosted model unless you choose
-one.
+There is no password to reset, because there is no password, and that is the
+point rather than a gap. A password can be guessed against a stolen database;
+a 256-bit key cannot, so a dump of the server yields wrapped keys and no way
+to unwrap them. Lose the key and the data on the server is unreadable to
+everyone, you included, which is why the app asks you to save it somewhere
+safe when it is shown. Your journal stays intact in every browser that has it,
+and the CSV export needs no key at all.
+
+Sharing works by code. Each account has a short share code; the owner of a
+journal enters a partner's code, the partner accepts, and from then on both
+devices push and pull the same encrypted records. The server can see that two
+accounts share a journal and how many records it holds, and nothing else.
 
 ## Report a problem
 

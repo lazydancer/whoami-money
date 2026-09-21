@@ -1,6 +1,6 @@
-# Security
+# Security — whoami.money
 
-whoami keeps your ledger in your browser and, if you turn sync on, sends only
+whoami.money keeps your ledger in your browser and, if you turn sync on, sends only
 ciphertext to the server. A flaw in that model is worth fixing quietly before
 it is announced, so please do not open a public issue for one.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The six labels this repository triages by. Run once after `gh auth login`:
+# The six labels whoami.money's tracker triages by. Run once after `gh auth login`:
 #   ./scripts/labels.sh lazydancer/whoami-money
 set -euo pipefail
 REPO=${1:?repo, e.g. lazydancer/whoami-money}

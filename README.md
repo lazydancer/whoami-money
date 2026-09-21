@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/balance.png" alt="whoami.money — balance sheet over time, with the net line and the accounts beneath it">
+  <a href="https://whoami.money"><img src="docs/balance.png" alt="whoami.money — balance sheet over time, with the net line and the accounts beneath it"></a>
 </p>
 
 <h1 align="center">whoami.money</h1>
@@ -35,7 +35,7 @@ sorting and hierarchy are the same act, and the whole thing round-trips through
 a CSV you can open in any spreadsheet.
 
 <p align="center">
-  <img src="docs/ledger.png" alt="The ledger: a grid of transactions with the accounts nav beside it">
+  <a href="https://whoami.money"><img src="docs/ledger.png" alt="The ledger: a grid of transactions with the accounts nav beside it"></a>
 </p>
 
 ### Reports that read a period

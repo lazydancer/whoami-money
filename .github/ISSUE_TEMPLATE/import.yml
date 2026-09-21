@@ -1,0 +1,55 @@
+name: Import problem
+description: A bank file or a paste the app read wrongly or refused.
+labels: ['import']
+body:
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: No statement attached
+      description: Do not attach the file or paste rows from it. Describe its shape instead; a handful of invented rows in the same layout is ideal.
+      options:
+        - label: This report contains no rows from a real statement.
+          required: true
+  - type: input
+    id: bank
+    attributes:
+      label: Bank or card issuer
+      placeholder: e.g. RBC, Tangerine, Desjardins, Amex
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: File format
+      options:
+        - CSV
+        - OFX
+        - QFX
+        - Pasted from a spreadsheet
+        - Other (say what below)
+    validations:
+      required: true
+  - type: textarea
+    id: shape
+    attributes:
+      label: The file's shape
+      description: The header line if it has one, how dates and amounts are written, whether debits and credits are one column or two, and any lines above or below the table. Invented values are fine.
+      placeholder: |
+        Date,Description,Withdrawals,Deposits,Balance
+        2026-09-03,ESSO 1234,52.10,,1234.56
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What the app did with it
+      description: Refused it with a message (copy the message), read the wrong dates, flipped the direction, missed rows, filed rows on the wrong side — say which.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      placeholder: Journal → Guide, at the bottom
+    validations:
+      required: true

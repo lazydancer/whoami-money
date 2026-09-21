@@ -1,0 +1,61 @@
+name: Bug
+description: Something the app did that it should not have.
+labels: ['bug']
+body:
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: No financial data
+      description: A report must not carry your journal, a statement, an account key, a share code or a screenshot with real numbers.
+      options:
+        - label: This report contains no financial data of mine or anyone else's.
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Journal → Guide, at the bottom of the page.
+      placeholder: e.g. 2026-09-21 (4402c07)
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: e.g. Firefox 147 on Fedora, or Safari on iPhone 15
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Journal mode
+      options:
+        - Local only
+        - Sync on (an account)
+        - The sample journal
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did
+      description: Step by step, from a page the app opens on. If it takes data to reproduce, say how to make it up.
+      placeholder: |
+        1. Open Transactions
+        2. Select twenty rows in the payee column
+        3. Press Ctrl+D
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Words, or a screenshot with the numbers hidden. If the app showed an error, copy the text of it.
+    validations:
+      required: true

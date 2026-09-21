@@ -1,0 +1,21 @@
+name: Idea
+description: Something the app does not do and you think it should.
+labels: ['idea']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: The situation, not the feature. What are you looking at, and what question can you not answer?
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How you do it today
+      description: In the app, in a spreadsheet, on paper, or not at all.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help
+      description: If you have a shape in mind, describe it. If not, leave this out; the problem is the useful part.

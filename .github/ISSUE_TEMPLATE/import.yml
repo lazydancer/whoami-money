@@ -50,6 +50,6 @@ body:
     id: version
     attributes:
       label: App version
-      placeholder: Journal → Guide, at the bottom
+      placeholder: The last line of Home, About or the file page
     validations:
       required: true

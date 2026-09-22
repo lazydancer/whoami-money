@@ -14,7 +14,7 @@ body:
     id: version
     attributes:
       label: App version
-      description: Journal → Guide, at the bottom of the page.
+      description: The last line of Home, About, the file page or the account page.
       placeholder: e.g. 2026-09-21 (4402c07)
     validations:
       required: true
